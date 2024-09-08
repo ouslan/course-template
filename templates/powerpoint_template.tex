@@ -4,28 +4,30 @@
 % ***** INFO *****
 % ****************
 \usepackage[english]{babel}
-\title[Insitute]{Beamer Template}
-\subtitle{Assets for \LaTeX}
-\author[Name Surname]{Name Surname}
-\institute[]{Insitute}
-\newcommand{\currentyear}{\the\year} % \currentyear
-\newcommand{\nextyear}{\the\numexpr\year+1\relax} % \nextyear
-\date{\currentyear/\nextyear} % or \today
+\title[]{Assignment 1}
+\subtitle{ECAG-6665: Applied Econometrics}
+\author[Name Surname]{Alejandro Ouslan}
+\institute[UPR.png]{University of Puerto Rico}
+\date{} % or \today
 
 % *******************
 % ***** PROJECT *****
 % *******************
-\definecolor{main}{HTML}{0000FF}
+% main color: to black
+\definecolor{main}{HTML}{000000}
 \setbeamercolor{structure}{fg=main}
 
 % *****************
 % ***** THEME *****
 % *****************
-\usetheme{Luebeck}
 \usepackage{helvet}
 \renewcommand{\familydefault}{\sfdefault}
 \setbeamertemplate{frametitle continuation}{\gdef\beamer@frametitle{}}
 \setbeamertemplate{footline}{}
+\setbeamertemplate{navigation symbols}{}
+\usepackage{csquotes}
+\usepackage[backend=biber,style=numeric]{biblatex}
+\addbibresource{sample.bib} % Link to the bibliography file
 
 % *****************
 % ***** CODE *****
@@ -107,7 +109,7 @@
 \begin{frame}{}
 	\vspace{\fill}
 
-	\includegraphics[width=0.16\linewidth]{example-image}
+	\includegraphics[width=0.16\linewidth]{UPR.png}
 
 	\vspace{\fill}
 
@@ -241,8 +243,8 @@ test_loss, test_acc = model.evaluate(X_test, y_test)
 	\begin{table}
 		\centering
 		\begin{tabular}{cc}
-			\includegraphics[width=0.4\linewidth]{example-image} &
-			\includegraphics[width=0.4\linewidth]{example-image}   \\
+			\includegraphics[width=0.4\linewidth]{UPR.png} &
+			\includegraphics[width=0.4\linewidth]{example-image} \\
 		\end{tabular}
 		\caption{Example of multiple images.}
 		\label{tab:1}
@@ -281,13 +283,10 @@ test_loss, test_acc = model.evaluate(X_test, y_test)
 	\framebreak
 
 	\scriptsize
-	\bibliographystyle{plain}
-	\bibliography{bib/references}
+	\printbibliography
 \end{frame}
 % ***************
 % ***** END *****
 % ***************
 
 \end{document}
-
-
